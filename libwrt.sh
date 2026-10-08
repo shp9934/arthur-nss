@@ -1,3 +1,7 @@
-rm -rf package/emortal/luci-app-athena-led
-git clone --depth=1 https://github.com/NONGFAH/luci-app-athena-led package/luci-app-athena-led
-chmod +x package/luci-app-athena-led/root/etc/init.d/athena_led package/luci-app-athena-led/root/usr/sbin/athena-led
+#!/bin/sh
+set -eu
+
+# 添加 Lucky 主程序和 LuCI 界面
+git clone --depth 1 \
+  https://github.com/gdy666/luci-app-lucky.git \
+  package/lucky-suite
